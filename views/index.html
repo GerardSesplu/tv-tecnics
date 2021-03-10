@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tv tècnics</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body>
+    
+    <script src="https://kit.fontawesome.com/96856623da.js" crossorigin="anonymous"></script>
+   
+    <header class="navbar">
+        <div class="header-content">
+            <a id="logo-icon" href="index.html">
+                <img src="../libs/tv-square-logo.png" alt="" class="tv-square">
+                <h1 id="logo-tecnics">Tècnics</h1>
+            </a>
+    
+            <ul class="nav-list">
+                <a href="equips_de_so.html" class="header-item">
+                    <p class="header-item-name">Equips de So</p>
+                    <hr class="nav-line-header">
+                </a>
+                <a href="antenes.html" class="header-item">
+                    <p class="header-item-name-">Antenes</p>
+                    <hr class="nav-line-header">
+                </a>
+                <a href="informatica.html" class="header-item">
+                    <p class="header-item-name">Informàtica</p>
+                    <hr class="nav-line-header">
+                </a>
+            </ul>
+        </div>
+    </header>    
+
+    <div class="container" id="container-box">
+    
+        <div class="image-container">
+
+            <div id="menu-container">
+
+                <a class="menu-item-target" id="menu-item-equipsdeso" href="equips_de_so.html">
+                    <h2 class="item-menu-title">Equips de So</h2>
+                    <hr class="nav-line"></hr>
+                </a>
+
+                <a class="menu-item-target" id="menu-item-antenes" href="antenes.html">
+                    <h2 class="item-menu-title">Antenes de Tv</h2>
+                    <hr class="nav-line"></hr>
+                </a>
+                
+                <a class="menu-item-target" id="menu-item-informatica" href="informatica.html">
+                    <h2 class="item-menu-title">Informàtica</h2>
+                    <hr class="nav-line"></hr>
+                </a>
+            </div>
+        
+    
+            <div class="info-container">
+                <h1 class="title-text">Qui Som?</h1>
+                <hr class="title-line">
+                <p class="description-text">
+                    TV Tècnics és una empresa amb més de 20 anys d’experiència. El nostre equip de professionals està preparat i perfectament qualificat, disposem d’amplis coneixements i llarga experiència en el sector, dedicant-nos a l'assistència tècnica en instal·lacions i reparacions. Aquest és un factor que ens avala i garanteix un servei professional.
+                    <br>
+                    Fem instal·lacions i ens desplacem per tot Catalunya.
+                    TV Tècnics desenvolupa instal·lacions de TV Terrestre i Satèl·lit en habitatges, comunitats de veïns, locals comercials, hotels, ..., sempre sota la garantia d’utilitzar les millors marques.        
+                    En totes les instal·lacions fem un estudi personalitzat per tal d’obtenir la millor recepció i qualitat del senyal al seu habitatge.
+                    També som especialistes en reparació d’aparells electrònics de la gama marró.</p>
+            </div>
+        </div>
+
+        <div class="info-container">
+            <h1 class="title-text">On ens pots trobar?</h1>
+            <hr class="title-line">
+            <p class="description-text">Fem instal·lacions i ens desplacem per tot Catalunya.
+                TV Tècnics desenvolupa instal·lacions de TV Terrestre i Satèl·lit en habitatges, comunitats de veïns, locals comercials, hotels, ..., sempre sota la garantia d’utilitzar les millors marques.        
+                En totes les instal·lacions.</p>
+                <div id="map"></div>
+        </div>
+
+        <div class="info-container">
+            <h1 class="title-text">Demana una reparació</h1>
+            <hr class="title-line">
+            <p class="description-text">Fem instal·lacions i ens desplacem per tot Catalunya.
+                TV Tècnics desenvolupa instal·lacions de TV Terrestre i Satèl·lit en habitatges, comunitats de veïns, locals comercials, hotels, ..., sempre sota la garantia d’utilitzar les millors marques.        
+                En totes les instal·lacions.</p>
+            <a class="link" href="#">Demana una reparació</a>
+
+            <form action="">
+                <input type="text" placeholder= "Correu electrònic">
+                <input type="text" placeholder="Nom i cognoms">
+                <textarea placeholder="Missatge" name="message" id="msg-input" cols="30" rows="10"></textarea>
+                <button type="button">Enviar</button>
+            </form>
+        </div>
+        
+    </div>
+
+    <script src="../controllers/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPopwfqzky2JnctlED1kI232OWJDM3Y2w&callback=initMap&libraries=&v=weekly"async></script>
+    
+    
+</body>
+</html>
