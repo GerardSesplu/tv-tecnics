@@ -41,7 +41,7 @@ function sendMail(){
   };
 
   const jsonString = JSON.stringify(mailData);
-  const url = 'http://localhost:8080/send';
+  const url = 'https://tv-tecnics.herokuapp.com/send';
   const xhr = new XMLHttpRequest();
 
   xhr.open('POST', url);
