@@ -28,6 +28,25 @@ function initMap() {
   });
 } */
 
+function printMsg(){
+
+  document.getElementById('contactEmail').value = '';
+  document.getElementById('contactName').value = '';
+  document.getElementById('msg-input').value = '';
+ 
+
+}
+
+function printErrorMsg(){
+
+  document.getElementById('contactEmail').value = '';
+  document.getElementById('contactName').value = '';
+  document.getElementById('msg-input').value = '';
+  
+
+}
+
+
 function sendMail(){
 
   const email = document.getElementById('contactEmail').value;
@@ -40,15 +59,33 @@ function sendMail(){
     text: `${text}`
   };
 
-  const jsonString = JSON.stringify(mailData);
-  const url = 'https://tv-tecnics.herokuapp.com/send';
-  const xhr = new XMLHttpRequest();
+  return new Promise(function (resolve, reject) {
 
-  xhr.open('POST', url);
-  xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-  xhr.send(jsonString);
+    const jsonString = JSON.stringify(mailData);
+    const url = 'https://tv-tecnics.herokuapp.com/send';
+    const xhr = new XMLHttpRequest();
 
+    xhr.open('POST', url);
+    xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+    xhr.send(jsonString);    
 
-  
+    xhr.onload = function(){
+        resolve(this.responseText)
+      };
+
+    xhr.onerror = function(){
+        reject(new Error('Network Error'))
+      };
+  });
 }
+
+function makeRequest(){
+
+  sendMail().then(function(jsonString){
+    document.getElementById('button-form').insertAdjacentHTML('afterend', '<span id="span-msg-sended">*Missatge enviat correctament');
+  }).catch( function(err){
+    document.getElementById('button-form').insertAdjacentHTML('afterend', "<span id='span-msg-error'>*El missatge no s'ha pogut enviar");
+  });
+}
+
 

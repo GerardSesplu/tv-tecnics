@@ -270,6 +270,17 @@ button:hover{
     margin-top: 15px;
 }
 
+#span-msg-sended{
+    color: rgb(0, 255, 136);
+    font-size: 15px;
+    display: block;
+}
+
+#span-msg-error{
+    color: rgb(255, 0, 0);
+    font-size: 15px;
+    display: block;
+}
 
 
 @media (max-width: 1100px){
