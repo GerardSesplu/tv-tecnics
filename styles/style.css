@@ -227,7 +227,7 @@ form{
 input{
     border: none;
     height: 30px;
-    width: 250px;
+    width: 410px;
     background-color: rgba(255, 255, 255, 0.9);
     color: rgb(43, 43, 43);
     padding-left: 10px;
@@ -237,6 +237,26 @@ input{
     font-family: poppins, arial, helvetica;
 }
 
+.dateHourContainer{
+    width: 400px;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 10px;
+    column-gap: 25px;
+}
+
+#contactDate{
+    width: 305px;   
+}
+
+#contactHour{
+    width: 80px;
+    height: 30x;
+    font-family: poppins, arial, helvetica;
+    border-radius: 6px;
+    height: 30px;
+    border: none;
+}
 
 textarea{
     border: none;
@@ -269,6 +289,8 @@ button:hover{
     color: white;
     margin-top: 15px;
 }
+
+
 
 
 

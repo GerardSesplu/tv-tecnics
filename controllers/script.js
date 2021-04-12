@@ -33,11 +33,17 @@ function sendMail(){
   const email = document.getElementById('contactEmail').value;
   const title = document.getElementById('contactName').value;
   const text = document.getElementById('msg-input').value;
+  const date = document.getElementById('contactDate').value;
+  const hour = document.getElementById('contactHour').value;
+  const phone = document.getElementById('contactPhone').value;
 
   const mailData = {
-    email: `${email}`,
-    title: `${title}`,
-    text: `${text}`
+    email: email,
+    title: title,
+    text: text,
+    date: hour,
+    hour: hour,
+    phone: phone
   };
 
   const jsonString = JSON.stringify(mailData);

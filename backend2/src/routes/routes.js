@@ -19,6 +19,9 @@ app.use(express.json());
         const email = req.body.email;
         const title = req.body.title;
         const text = req.body.text; 
+        const hour = req.body.hour;
+        const date = req.body.date;
+        const phone = req.body.phone;
 
         //Nodemailer
 
@@ -34,18 +37,18 @@ app.use(express.json());
             from:'gerardsesplu@gmail.com',
             to:'gerardsesplu@gmail.com',
             subject: title,
-            text: text + ' ' + email
+            text: `${text}, email: ${email}, dia: ${date}, hora: ${hour}, telefon:${phone}`
         };
 
         transport.sendMail(mailOptions, function(err, info){
             if(err){
                 console.log(err);
             } else {
-                console.log('email sended', info.response, email, title, text);
+                console.log('email sended', info.response, email, title, text, date, hour);
             }
         });
 
-        res.send(`email sended ${email,title,text}`); 
+        res.send(`email sended ${email,title,text, date, hour}`); 
     });
 
     router.get('/check', (req, res) => {

@@ -93,6 +93,29 @@
             <form action="">
                 <input type="text" placeholder= "Correu electrònic" id="contactEmail" value="">
                 <input type="text" placeholder="Nom i cognoms" id="contactName" value="">
+                <input type="text" placeholder="Telèfon de contacte" id="contactPhone" value="" >
+                <div class="dateHourContainer">
+                    <input type="date" placeholder="Dia" id="contactDate">
+                    <select name="contactHour" class="form-select" id="contactHour">
+                        <option value="10:00">10:00</option>
+                        <option value="10:00">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:00">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:00">12:30</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:00">13:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:00">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:00">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:00">16:30</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:00">17:30</option>
+                        <option value="18:00">18:00</option>
+                    </select>
+                </div>
                 <textarea placeholder="Missatge" name="message" id="msg-input" cols="30" rows="10" value="value"></textarea>
                 <button type="button" onclick="sendMail()">Enviar</button>
             </form>
