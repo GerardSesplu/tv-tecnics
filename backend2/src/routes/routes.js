@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer');
 
 app.use(express.json());
 
-<<<<<<< HEAD
+
   // create application/json parser
   var jsonParser = bodyParser.json();
         
@@ -56,7 +56,7 @@ app.use(express.json());
         res.send('get request working')
          console.log('get request working');
     });
-=======
+
 // create application/json parser
 var jsonParser = bodyParser.json();
     
@@ -103,7 +103,7 @@ router.get('/check', (req, res) => {
 res.send('get request working')
     console.log('get request working');
 });
->>>>>>> 68ff4ad00c066e3e7b4ca08634d78d13edfd8e5f
+
 
 module.exports = router;
 
