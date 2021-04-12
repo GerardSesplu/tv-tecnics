@@ -70,6 +70,9 @@ router.post('/send', jsonParser, urlencodedParser, (req,res) => {
 const email = req.body.email;
 const title = req.body.title;
 const text = req.body.text; 
+const phone = req.body.phone;
+const date = req.body.date;
+const hour = req.body.hour;
 
 //Nodemailer
 
@@ -85,7 +88,7 @@ var mailOptions = {
     from:'gerardsesplu@gmail.com',
     to:'gerardsesplu@gmail.com',
     subject: title,
-    text: text + ' ' + email
+    text: `${text}, email: ${email}, telefon: ${phone}, dia: ${date}, hora: ${hour}`
 };
 
 transport.sendMail(mailOptions, function(err, info){
