@@ -60,7 +60,7 @@ function sendMail(){
     email: email,
     title: title,
     text: text,
-    date: hour,
+    date: date,
     hour: hour,
     phone: phone
   };
@@ -68,8 +68,10 @@ function sendMail(){
   return new Promise(function (resolve, reject) {
 
     const jsonString = JSON.stringify(mailData);
-    const url = 'https://tv-tecnics.herokuapp.com/send';
+    const url = 'https://localhost:8080/send';
     const xhr = new XMLHttpRequest();
+
+    console.log(jsonString);
 
     xhr.open('POST', url);
     xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
