@@ -36,7 +36,7 @@ app.use(express.json());
 
         var mailOptions = {
             from:'gerardsesplu@gmail.com',
-            to:'gerardsesplu@gmail.com',
+            to:'xavses@gmail.com',
             subject: title,
             text: `${text}, email: ${email}, dia: ${date}, hora: ${hour}, telefon:${phone}`
         };
