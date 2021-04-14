@@ -12,7 +12,7 @@ window.addEventListener('scroll', function(){
 
 });
 
-/* // Initialize and add the map
+// Initialize and add the map
 function initMap() {
   // The location of Uluru
   const uluru = { lat: 41.384, lng: 2.166 };
@@ -26,7 +26,28 @@ function initMap() {
     position: uluru,
     map: map,
   });
+} 
+
+/*Leaftflet Map*/
+
+
+
+/* async function createMap(){
+
+  var map = L.map('map', {
+    center: [51.505, -0.09],
+    zoom: 13
+});
+
+  await L.tileLayer('https://api.maptiler.com/maps/streets/?key=FV8qcLFLnEU8m35PyC6V#-0.2/0.00000/8.00813', {
+    atribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+  }).addTo(map);
+
+  var marker = L.marker([51.5, -0.09]).addTo(map);
+
 } */
+
+
 
 function printMsg(){
 
@@ -96,4 +117,5 @@ function makeRequest(){
   });
 }
 
+//createMap();
 
