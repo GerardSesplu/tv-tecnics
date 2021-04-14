@@ -89,7 +89,8 @@ function sendMail(){
   return new Promise(function (resolve, reject) {
 
     const jsonString = JSON.stringify(mailData);
-    const url = 'https://localhost:8080/send';
+    //const url = 'http://localhost:8080/send';
+    const url = 'https://tv-tecnics.herokuapp.com/send';
     const xhr = new XMLHttpRequest();
 
     console.log(jsonString);

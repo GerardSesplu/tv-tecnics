@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const nodemailer = require('nodemailer');
 var bodyParser = require('body-parser');
+const cors = require('cors');
+
+
 
 // create application/json parser
 var jsonParser = bodyParser.json();
@@ -13,6 +16,7 @@ app.set('port', process.env.PORT || 8080);
 
 //Middlewares
 
+app.use(cors());
 app.use(express.json());
 
 //routes
