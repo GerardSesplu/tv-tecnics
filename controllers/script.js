@@ -1,4 +1,4 @@
-window.addEventListener('scroll', function(){
+/* window.addEventListener('scroll', function(){
 
   var header = document.querySelector('.navbar');
   var square = document.querySelector('.tv-square');
@@ -10,7 +10,7 @@ window.addEventListener('scroll', function(){
   line.classList.toggle('sticky-line', window.scrollY > 0);
   list.classList.toggle('sticky-list', window.scrollY > 0);
 
-});
+}); */
 
 // Initialize and add the map
 function initMap() {
@@ -120,3 +120,50 @@ function makeRequest(){
 
 //createMap();
 
+
+let position = 0;
+
+function arrowActive(value){
+
+  if(value == 'down'){
+
+    position = position + 1;
+
+    if(position == 2){
+      document.querySelector('.arrow-img').className = "arrow-img-blocked";
+    }
+
+    if(position !== 0){
+      document.querySelector('.arrow-img-up-blocked').className = "arrow-img-up";
+    }
+
+  } else {
+
+    position = position - 1;
+
+    if(position == 0){
+      document.querySelector('.arrow-img-up').className = "arrow-img-up-blocked";
+    }
+
+  }
+
+}
+
+/* function arrowActive(updown){
+    if(updown == 'down'){
+        position = position + 1;
+        if(position == 2 ){
+          document.querySelector('.arrow-img').className = "arrow-img-blocked"
+        } else {
+          document.querySelector('.arrow-img-blocked').className = "arrow-img"
+        }
+    } else {
+        position = position - 1;
+        if(position == 0 ){
+          document.querySelector('.arrow-img-up').className = "arrow-img-up-blocked"
+        } else {
+          document.querySelector('.arrow-img-blocked').className = "arrow-img"
+        }
+    }
+}
+*/

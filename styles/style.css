@@ -3,12 +3,13 @@
     padding: 0;
 }
 
-body{
+html, body{
     font-family: poppins, Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom right, rgb(35,82,157), rgb(0, 255, 136));
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     color: white;
+    height: 100%;
+    background-image: url(../libs/reparacionpc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 a{
@@ -69,7 +70,7 @@ header{
 
 .nav-list{
     float: right;
-    display: none;
+    display: block;
 }
 
 .sticky-list{
@@ -109,7 +110,7 @@ header{
     grid-template-columns: auto auto auto;
     width: fit-content;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .menu-item-target{
@@ -174,17 +175,14 @@ header{
 .container{
     width: 100%;
     margin: auto;
+    height: auto;
 }
 
 .image-container{
-    background-image: url(../libs/reparacionpc.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
     width: 100%;
     padding-top: 50px;
-    padding-bottom: 50px;
-    margin-bottom: 50px;
     background-attachment: fixed;
+    height: auto;
 }
 
 .info-container{
@@ -303,6 +301,89 @@ button:hover{
     display: block;
 }
 
+
+/*Swiper*/
+
+.swiper-slide{
+    height: 300px;
+    width: 800px;
+}
+
+.swiper-wrapper{
+    height:300px;
+    width: 1000px;
+}
+
+.swiper-container{
+    height: 300px;
+    width: 1000px;
+}
+
+.swiper-scrollbar{
+    color:rgb(0, 255, 136);;
+}
+
+.swiper-button-prev{
+    color: rgb(0, 255, 136);
+}
+
+.swiper-button-next{
+    color: rgb(0, 255, 136);
+}
+
+.arrow-div{
+    width: 100%;
+    text-align: center;
+    background: none;
+}
+.arrow-div:hover{
+    background: none;
+    opacity: 0.5;
+}
+
+.arrow-img{
+    height: 40px;
+    z-index: 3;
+    margin: auto;
+    align-items: center;
+}
+
+.arrow-img-up{
+    height: 40px;
+    z-index: 3;
+    margin: auto;
+    align-items: center;
+    transform: rotate(180deg);
+}
+
+.arrow-img-blocked{
+    height: 40px;
+    z-index: 3;
+    margin: auto;
+    align-items: center;
+    opacity: 0.2;
+}
+
+.arrow-img-up-blocked{
+    height: 40px;
+    z-index: 3;
+    margin: auto;
+    align-items: center;
+    opacity: 0.2;
+    transform: rotate(180deg);
+}
+
+/*Footer*/
+
+footer{
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to bottom right, rgb(35,82,157), rgb(0, 255, 136));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}   
 
 
 
