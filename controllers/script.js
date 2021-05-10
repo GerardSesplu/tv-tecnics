@@ -32,20 +32,21 @@ function initMap() {
 
 
 
-/* async function createMap(){
+ async function createMap(){
 
-  var map = L.map('map', {
-    center: [51.505, -0.09],
-    zoom: 13
-});
+  var map = L.map('map').setView([51.505, -0.09], 13);
 
-  await L.tileLayer('https://api.maptiler.com/maps/streets/?key=FV8qcLFLnEU8m35PyC6V#-0.2/0.00000/8.00813', {
-    atribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
+  
+  L.marker([51.5, -0.09]).addTo(map)
+      .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+      .openPopup();
 
   var marker = L.marker([51.5, -0.09]).addTo(map);
 
-} */
+} 
 
 
 
@@ -120,50 +121,72 @@ function makeRequest(){
 
 //createMap();
 
+const swiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: false,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.arrow-div-down',
+    prevEl: '.arrow-div-up',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  } 
+});
 
 let position = 0;
+let arrowUp = false;
+let arrowDown = true;
 
-function arrowActive(value){
+function arrowActive(value) {
 
-  if(value == 'down'){
+  switch(value){
+    case 'down':
 
-    position = position + 1;
+      position = position + 1; 
+      console.log(position);
 
-    if(position == 2){
-      document.querySelector('.arrow-img').className = "arrow-img-blocked";
-    }
+      if(position !== 0 && arrowUp == false){
+        document.querySelector('.arrow-div-up').insertAdjacentHTML('afterbegin', `<img src="../libs/arrow.png" alt="" class="arrow-img-up" id="arrow-img-up">`);
+        arrowUp = true;
+        prevButton = '.arrow-img-up'
+      };
 
-    if(position !== 0){
-      document.querySelector('.arrow-img-up-blocked').className = "arrow-img-up";
-    }
+      if(position == 2){
+        document.querySelector('.arrow-div-down').innerHTML = '';
+        arrowDown = false;
+      }
 
-  } else {
+      break;
 
-    position = position - 1;
+    case 'up':
 
-    if(position == 0){
-      document.querySelector('.arrow-img-up').className = "arrow-img-up-blocked";
-    }
+      position = position - 1;
+      console.log(position);
 
+      if(position !== 2 && arrowDown == false){
+        document.querySelector('.arrow-div-down').insertAdjacentHTML('afterbegin', `<img src="../libs/arrow.png" alt="" class="arrow-img-down" id="arrow-img-down">`);
+        arrowDown = true
+      };
+
+      if(position == 0){
+        document.querySelector('.arrow-div-up').innerHTML = '';
+        arrowUp = false;
+      }
+
+      break;
   }
 
 }
 
-/* function arrowActive(updown){
-    if(updown == 'down'){
-        position = position + 1;
-        if(position == 2 ){
-          document.querySelector('.arrow-img').className = "arrow-img-blocked"
-        } else {
-          document.querySelector('.arrow-img-blocked').className = "arrow-img"
-        }
-    } else {
-        position = position - 1;
-        if(position == 0 ){
-          document.querySelector('.arrow-img-up').className = "arrow-img-up-blocked"
-        } else {
-          document.querySelector('.arrow-img-blocked').className = "arrow-img"
-        }
-    }
-}
-*/
+
+

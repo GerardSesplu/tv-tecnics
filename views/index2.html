@@ -21,7 +21,7 @@
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin="false"contentType="application/json"></script>
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
 </head>
 <body>
     
@@ -77,8 +77,8 @@
             </div>
 
 
-            <button class="arrow-div">
-                <img src="../libs/toppng.com-white-drop-down-arrow-423x265.png" alt="" class="arrow-img-up-blocked" onclick="arrowActive('up')">
+            <button class="arrow-div-up" onclick="arrowActive('up')">
+                
             </button>
 
             <!-- Slider main container -->
@@ -134,11 +134,11 @@
                 <i class="fa fa-caret-down" aria-hidden="true"></i>        
             </div>  
         
-            <button class="arrow-div">
-                <img src="../libs/toppng.com-white-drop-down-arrow-423x265.png" alt="" class="arrow-img" onclick="arrowActive('down')">
+            <button class="arrow-div-down" onclick="arrowActive('down')">
+                <img src="../libs/arrow.png" alt="" class="arrow-img-down" id="arrow-img">
             </button>
 
-            <footer></footer>
+            
 
         </div>
 
@@ -148,7 +148,7 @@
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="../controllers/script.js"></script>
-    <script src="../controllers/swiperscript.js"></script>
+    
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPopwfqzky2JnctlED1kI232OWJDM3Y2w&callback=initMap&libraries=&v=weekly"async></script>  -->
     
     

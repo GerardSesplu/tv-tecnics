@@ -86,7 +86,7 @@ header{
     opacity: 0;
     width: 40px;
     position: relative;
-    bottom: 30px;
+    bottom: 50px;
 }
 
 .sticky-line{
@@ -331,17 +331,26 @@ button:hover{
     color: rgb(0, 255, 136);
 }
 
-.arrow-div{
+.arrow-div-up{
     width: 100%;
     text-align: center;
     background: none;
 }
-.arrow-div:hover{
+.arrow-div-down{
+    width: 100%;
+    text-align: center;
     background: none;
-    opacity: 0.5;
+}
+.arrow-div-up:hover{
+    background: none;
+    opacity: 0.7;
+}
+.arrow-div-down:hover{
+    background: none;
+    opacity: 0.7;
 }
 
-.arrow-img{
+.arrow-img-down{
     height: 40px;
     z-index: 3;
     margin: auto;
