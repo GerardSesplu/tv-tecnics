@@ -13,7 +13,7 @@
 }); */
 
 // Initialize and add the map
-function initMap() {
+/* function initMap() {
   // The location of Uluru
   const uluru = { lat: 41.384, lng: 2.166 };
   // The map, centered at Uluru
@@ -26,11 +26,9 @@ function initMap() {
     position: uluru,
     map: map,
   });
-} 
+}  */
 
 /*Leaftflet Map*/
-
-
 
  async function createMap(){
 

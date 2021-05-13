@@ -207,11 +207,10 @@ header{
 
 /*Google maps api*/
 
-#map{
+#mapid{
     height: 300px;
     margin: auto;
-    margin-bottom: 50px;
-    margin-top: 20px;
+    margin-top: 200px;
 }
 
 
