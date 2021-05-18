@@ -138,7 +138,7 @@ const swiper = new Swiper('.swiper-container', {
   // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar',
-  } 
+  }
 });
 
 let position = 0;
@@ -157,11 +157,13 @@ function arrowActive(value) {
         document.querySelector('.arrow-div-up').insertAdjacentHTML('afterbegin', `<img src="../libs/arrow.png" alt="" class="arrow-img-up" id="arrow-img-up">`);
         arrowUp = true;
         prevButton = '.arrow-img-up'
+        document.querySelector('.body').className = 'body2';
       };
 
       if(position == 2){
         document.querySelector('.arrow-div-down').innerHTML = '';
         arrowDown = false;
+        document.querySelector('.body2').className = 'body3';
       }
 
       break;
@@ -174,11 +176,13 @@ function arrowActive(value) {
       if(position !== 2 && arrowDown == false){
         document.querySelector('.arrow-div-down').insertAdjacentHTML('afterbegin', `<img src="../libs/arrow.png" alt="" class="arrow-img-down" id="arrow-img-down">`);
         arrowDown = true
+        document.querySelector('.body3').className = 'body2';
       };
 
       if(position == 0){
         document.querySelector('.arrow-div-up').innerHTML = '';
         arrowUp = false;
+        document.querySelector('.body2').className = 'body';
       }
 
       break;
