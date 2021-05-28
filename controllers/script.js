@@ -200,5 +200,16 @@ function arrowActive(value) {
 
 }
 
+//view more/less
+
+function viewMore(){
+  document.getElementById('quisom-menys').style.display = 'none';
+  document.getElementById('quisom-mes').style.display = 'block';
+}
+
+function viewLess(){
+  document.getElementById('quisom-menys').style.display = 'block';
+  document.getElementById('quisom-mes').style.display = 'none';
+}
 
 
