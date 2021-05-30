@@ -1,4 +1,4 @@
-/* window.addEventListener('scroll', function(){
+/* /* window.addEventListener('scroll', function(){
 
   var header = document.querySelector('.navbar');
   var square = document.querySelector('.tv-square');
