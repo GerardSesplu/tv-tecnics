@@ -11,6 +11,8 @@ html, body{
     background-size: cover;
     background-repeat: no-repeat;
     transition: background-image 1s;
+    min-height: 830px;
+    padding-bottom: 60px;
 }
 
 .html2, .body2{
@@ -231,6 +233,10 @@ header{
 
 .info-container-sp{
   margin-bottom: 40px;
+}
+
+.info-container-tv, .info-container-so{
+    margin-top: 40px;
 }
 
 .title-text{
@@ -508,9 +514,41 @@ footer{
     padding-bottom: 40px;
 }
 
+/*Reparacions style*/
+
+.logo-container{
+    width: 980px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 40px;
+}
+
+.logo-png{
+    width: 180px;
+    margin: auto;
+    margin-top:40px;
+}
+
+.logo-pmng-container{
+    height: 75px;
+    margin: auto;
+}
+
+#sanyo-logo{
+    width: 130px;
+}
+
+#lg-logo{
+    width: 120px;
+}
+
+#jbl-logo{
+    width: 120px;
+}
 
 @media (max-width: 1100px){
-    
+
     header{
         background-color: rgba(0, 0, 0, 0.9);
         position: sticky;
@@ -558,11 +596,17 @@ footer{
     }
 
     .image-container{
-        background-image: url(../libs/reparacionpc.jpg);
+        background-image: url(../libs/reparacionpc-short.jpg);
         padding-bottom: 80px;
         margin-bottom: 40px;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
+    .logo-container{
+        width: 90%;
+        grid-template-columns: auto auto auto;
+    }
 
 
 
@@ -612,6 +656,12 @@ footer{
     #quisom-menys{
         display: block;
     }
+
+
+}
+
+@media(max-width: 700px){
+
 
 
 }

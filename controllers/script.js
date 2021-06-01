@@ -1,4 +1,4 @@
-/* /* window.addEventListener('scroll', function(){
+/* window.addEventListener('scroll', function(){
 
   var header = document.querySelector('.navbar');
   var square = document.querySelector('.tv-square');
@@ -10,7 +10,7 @@
   line.classList.toggle('sticky-line', window.scrollY > 0);
   list.classList.toggle('sticky-list', window.scrollY > 0);
 
-}); */
+}); 
 
 // Initialize and add the map
 /* function initMap() {
