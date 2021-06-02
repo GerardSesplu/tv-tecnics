@@ -212,4 +212,3 @@ function viewLess(){
   document.getElementById('quisom-mes').style.display = 'none';
 }
 
-
