@@ -212,3 +212,18 @@ function viewLess(){
   document.getElementById('quisom-mes').style.display = 'none';
 }
 
+
+//Admin
+
+function checkUser(){
+  let user = document.getElementById('user').value
+  let pass = document.getElementById('pass').value
+
+  if(user === "admin" && pass === "contra"){
+    window.location.replace('status.html');
+  }else{
+    alert('usuari o contrasenya incorrectes')
+  }
+
+}
+

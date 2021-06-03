@@ -588,12 +588,45 @@ footer{
     margin-top: 20px;
     margin-left: 0;
 }
+
 .button-form-expanded:hover{
     width: 120px;
     height: 45px;
     margin: auto;
     margin-top: 20px;
     margin-left: 0;
+}
+
+.user-form{
+    border: white 1px solid;
+    margin: auto;
+    padding: 100px;
+}
+
+.user-button{
+    margin: auto;
+    margin-right: 0;
+}
+
+/*Status Styles*/
+
+.status-container{
+    width: 800px;
+    height: 400px;
+    border: 1px solid white;
+    padding: 100px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.status-header{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 100%;
+}
+
+.status{
+    background: linear-gradient(to bottom right, rgb(35,82,157), rgb(0, 255, 136));
 }
 
 @media (max-width: 1100px){
