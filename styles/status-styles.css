@@ -1,0 +1,26 @@
+.main{
+      width: 900px;
+      display: grid;
+      grid-template-columns: 200px 700px;
+      margin: auto;
+}
+
+.header{
+      border: 1px solid black;
+      height: 500px;
+}
+
+.container{
+      border: 1px solid black;
+      height: 500px;
+}
+
+.item{
+      width: 80%;
+      margin-left: auto;
+      margin-right:auto ;
+      background-color: rgba(2, 3, 4, 0);
+      border-radius:0;
+      border-bottom: 1px solid black;
+      
+}
